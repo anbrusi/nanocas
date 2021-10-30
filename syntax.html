@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nanoCas syntax</title>
+</head>
+<body>
+    <h1>nanoCas Syntax</h1>
+    <div>
+       <pre>            
+       /**
+        * The syntax of $command is:
+        * 
+        * command          --> serviceCommand | nanoCASresult | assignement
+        * serviceCommand   --> "clr" | "mmdiv" "(" int "," int ")" | "mmmod" "(" int "," int ")" | "tostr" "(" stored-nanoCASobj ")" 
+        *                      | "show" "(" stored-nanoCASobj ")" | "nncmp"  "(" parameter "," parameter ")" | "incmp"  "(" parameter "," parameter ")"
+        *                      | "decrypt" "(" parameter ")"
+        * nanoCASresult    --> "strtonn" "(" parameter ")" | "nnadd" "(" parameter "," parameter ")" | "nnsub" "(" parameter "," parameter ")"
+        *                      | "nnmult" "(" parameter "," parameter ")" | "nndiv"  "(" parameter "," parameter ")"
+        *                      | "nnmod"  "(" parameter "," parameter ")" | "encrypt" "(" parameter ")"
+        *                      | "nngcd" "(" parameter "," parameter ")"
+        * 
+        *                      | "strtoin" "(" parameter ")" | "inadd" "(" parameter "," parameter ")" | "insub" "(" parameter "," parameter ")"
+        *                      | "inabs" "(" parameter ")" | "inmult" "(" parameter "," parameter ")" |
+        *                      | "indiv" "(" parameter "," parameter ")"  | "inmod" "(" parameter "," parameter ")"
+
+        *                      | "strtorn" "(" parameter ")" | "rnadd" "(" parameter "," parameter ")" | "rnsub" "(" parameter "," parameter ")"
+        *                      | "rnmult" "(" parameter "," parameter ")"  | "rndiv" "(" parameter "," parameter ")" 
+        *                      | "rnpower" "(" parameter "," parameter ")"
+        * parameter        --> varname | nanoCASlit 
+        * varname          --> "$" string
+        * nanoCASlit       --> string
+        * assignement      --> string ":=" nanoCASresult
+        * 
+        * 
+        */
+        </pre>
+    </div>
+</body>
+</html>

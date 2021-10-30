@@ -1,0 +1,11 @@
+textarea.clInput {
+    height: 200px;
+    width: 100%;
+}
+textarea.clOutput {
+    height: 500px;
+    width: 100%;
+}
+.isBelow {
+    margin-top: 5px;
+}
