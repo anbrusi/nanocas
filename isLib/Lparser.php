@@ -1,7 +1,7 @@
 <?php
 /**
  * @abstract
- * Small CAS system for isTest
+ * Support tools for nanoCAS. Formerly this class was LmicroCAS
  * 
  * 
  * The lexer accepts the following "mathexp" synatx:
@@ -46,7 +46,7 @@
  * @version 11.11.2019
  */
 namespace isLib;
-class LmicroCAS {
+class LmicroParser {
 	
 	const TAB = '  ';
 	const BR = "\r\n";
@@ -61,7 +61,7 @@ class LmicroCAS {
 	const EO_EVALUATION = 4;
 	
 	/**
-	 * Errors, that can occur in LmicroCAS, which are handled by $this->error	 *
+	 * Errors, that can occur in LmicroParser, which are handled by $this->error	 *
 	 */
 	const ERR_NOT_ASCII = 1; // The mathexp string submitted to the lexer contains non ASCII characters
 	const ERR_NO_INPUT = 2; // The mathexp string submitted to the lexer is empty. The check is made after eliminating blank space
@@ -526,13 +526,13 @@ class LmicroCAS {
 	
 	/**
 	 * Throws an exception with code = $errCode
-	 * The text is 'LmicroCAS error <name of $errcode>'. If there is an addendum ': <content of addendum>' is appended
+	 * The text is 'LmicroParser error <name of $errcode>'. If there is an addendum ': <content of addendum>' is appended
 	 * 
 	 * @param int $errCode
 	 * @throws \Exception
 	 */
 	private function error(int $errCode, $addendum = '') {
-		$txt = 'LmicroCAS error '.$this->errorName($errCode);
+		$txt = 'LmicroParser error '.$this->errorName($errCode);
 		if ($addendum != '') {
 			$txt .= ': '.$addendum;
 		}
